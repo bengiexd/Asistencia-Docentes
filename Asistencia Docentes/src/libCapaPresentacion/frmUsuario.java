@@ -102,9 +102,9 @@ public class frmUsuario extends frmMantenimiento{
 		label_1.setBounds(12, 57, 93, 15);
 		panel.add(label_1);
 		
-		JLabel label_2 = new JLabel("Cargo");
-		label_2.setBounds(12, 79, 93, 15);
-		panel.add(label_2);
+		JLabel lblTipo = new JLabel("Tipo");
+		lblTipo.setBounds(12, 79, 93, 15);
+		panel.add(lblTipo);
 		
 		JLabel label_3 = new JLabel("Nombres");
 		label_3.setBounds(13, 102, 93, 15);
@@ -180,7 +180,7 @@ public class frmUsuario extends frmMantenimiento{
 		AsignarEntidad(aUsuario);		
 
 		/* activar para conectar a la base de datos */
-		Listar();
+		//Listar();
 	}
 	
 	public ArrayList GenerarAtributos(){

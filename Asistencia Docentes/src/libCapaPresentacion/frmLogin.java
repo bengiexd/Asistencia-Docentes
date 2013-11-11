@@ -58,7 +58,7 @@ public class frmLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public void ContruirInterfaz(){
-		setTitle("Acceso al Sistema de Ventas");
+		setTitle("Acceso al Sistema de Asistencia de Docentes");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 521, 381);
 		contentPane = new JPanel();
@@ -123,7 +123,7 @@ public class frmLogin extends JFrame {
 		ContruirInterfaz();
 		AgregarEventos();
 		aConexion=new CConexion("root", "mysql", "3306");
-    	aConexion.CrearConexionDB("DBVenta");
+    	aConexion.CrearConexionDB("SARAD");
 	}
 	
 	public void AgregarEventos(){
@@ -135,6 +135,7 @@ public class frmLogin extends JFrame {
 				ArrayList datos = new ArrayList();
 				datos.add(usuario);
 				datos.add(pass);
+				/*
 				aConexion.correrProcedimientoAlmacenado("Usuario",datos,"Acceso");
 				ArrayList respuesta = aConexion.getResultadoA();
 				if(respuesta.size()==1){
@@ -144,6 +145,10 @@ public class frmLogin extends JFrame {
 					frmMenuPrincipal menu = new frmMenuPrincipal(respuesta);
 					menu.show();
 				}
+				*/
+				setVisible(false);
+				frmMenuPrincipal menu = new frmMenuPrincipal();
+				menu.show();
 			}
 		});
 	}
